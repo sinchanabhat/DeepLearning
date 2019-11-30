@@ -1,0 +1,22 @@
+Linear Model for MNIST
+MNIST is a collection of handwritten digits and a popular (albeit by now trivialized) benchmark for image classification models. You will see it A LOT.
+
+Go through this basic MNIST tutorial we wrote just for you! It’s a logistic (softmax) regression “walkthrough” both in terms of concepts and code. You will of course be tempted to just copy this code; please make sure you understand what each line does.
+
+Play around with the example code snippets. Change them around and see if you can predict what’s going to happen. Make sure you understand what you’re dealing with!
+
+Note: If you copy/paste this into Colab, make sure to set the TF version to 2.x first!!
+
+Building A Deep Model
+If you followed the tutorial linked above, you have already built a linear classification model. Next, turn this into a deep model by adding a hidden layer between inputs and outputs. To do so, you will need to add an additional set of weights and biases (after having chosen a size for the layer) as well as an activation function.
+There you go! You have created a Multilayer Perceptron. Hint: Initializing variables to 0 will not work for multilayer perceptrons. You need to initialize values randomly instead (e.g. random_uniform between -0.1 and 0.1). Why do you think this is the case?
+
+Next, you should explore this model: Experiment with different hidden layer sizes, activation functions or weight initializations. See if you can make any observations on how changing these parameters affects the model’s performance. Going to extremes can be very instructive here. Make some plots!
+
+Also, reflect on the Tensorflow interface: If you followed the tutorials you were asked to, you have been using a very low-level approach to defining models as well as their training and evaluation. Which of these parts do you think should be wrapped in higher-level interfaces? Do you feel like you are forced to provide any redundant information when defining your model? Any features you are missing so far?
+
+Bonus
+There are numerous ways to explore your model some more. For one, you could add more hidden layers and see how this affects the model. You could also try your hand at some basic visualization and model inspection: For example, visualize some of the images your model classifies incorrectly. Can you find out why your model has trouble with these?
+
+You may also have noticed that MNIST isn’t a particularly interesting dataset – even very simple models can reach very high accuracy and there isn’t much “going on” in the images. Luckily, Zalando Research has developed Fashion MNIST. This is a more interesting dataset with the exact same structure as MNIST, meaning you can use it without changing anything about your code. You can get it by simply using tf.keras.datasets.fashion_mnist instead of regular MNIST.
+You can attempt pretty much all of the above suggestions for this dataset as well!
